@@ -1,0 +1,14 @@
+S ::= <Inst><S> | ε
+Inst ::= <Expr> | <FuncDef>
+Expr ::= <Var> | <FuncCall> | <BinOp>
+FuncDef ::= "d" <Exprs> "D"
+Var ::= "a" <Num> | <Const>
+FuncCall ::= "f" <Num> <Args> "I"
+BinOp ::= <Op> <Var> <Var>
+Exprs ::= <Expr>;<Exprs> | <Expr>
+Num ::= "0" | ... | "9"
+Const ::= <Sign> <Nums>
+Args ::= <Expr> "i" <Args> | <Expr>
+Op ::= "-" | "+"
+Sign ::= '-' | ε
+Nums ::= <Num> <Nums> | <Num>
