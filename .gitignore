@@ -1,1 +1,5 @@
 target/*
+
+tas.bc
+tas.s
+a.out
